@@ -1,0 +1,20 @@
+<h1>Welcome to User Register Page</h1>
+
+<div style="display: table-caption">
+    <form>
+        User Name: <input type="text"  name="username" [value]="data.username" (change)="getUserFieldChanges('username',$event)"/>
+        Name: <input type="text" name="name"  [value]="data.name" (change)="getUserFieldChanges('name',$event)"/>
+        Email: <input type="email" name="Email" [value]="data.email"  (change)="getUserFieldChanges('email',$event)"/>
+        Password:<input type="password" name="Password"  [value]="data.password" (change)="getUserFieldChanges('password',$event)"/>
+        <label style="color: pink;">
+            password should contain min 8 charactors and it should be combination of alphanumerics
+        </label>
+        <br />
+        Confirm Password: <input type="password" name="Password" [value]="data.confirmPassword" (change)="getUserFieldChanges('confirmPassword',$event)"/>
+        Mobile Number:<input type="text" name="mobileNumber" [value]="data.mobileNo" (change)="getUserFieldChanges('mobileNo',$event)"/>
+        Address:<textarea maxlength=30 [value]="data.address"  (change)="getUserFieldChanges('address',$event)"></textarea>
+        <input type="button" value="Register" (click)="registerUser()"/>
+    </form>
+
+
+</div>
